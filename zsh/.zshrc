@@ -133,4 +133,6 @@ PATH=$PATH:/usr/local/share/npm/bin
 
 export PATH=$PATH
 
+CDPATH=.:$GOPATH/src/code.google.com/p:$GOPATH/src/github.com:$GOPATH/src/github.com/Hapara
+
 fortune | ponysay
