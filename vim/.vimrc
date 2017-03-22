@@ -32,6 +32,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'fatih/vim-go'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'burnettk/vim-angular'
+Plugin 'ternjs/tern_for_vim'
 
 "
 " End Plugins
@@ -157,6 +158,10 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
+" Map terndef
+au FileType javascript nmap <silent> <leader>d :TernDef<CR>
+au FileType go nmap <silent> <leader>d :GoDef<CR>
 
 " buffer
 nmap <leader>n<left>   :leftabove  vnew<CR>
