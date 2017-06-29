@@ -133,6 +133,13 @@ PATH=$PATH:/usr/local/share/npm/bin
 
 export PATH=$PATH
 
-CDPATH=.:$GOPATH/src/code.google.com/p:$GOPATH/src/github.com:$GOPATH/src/github.com/Hapara
+CDPATH=.:$GOPATH/src/code.google.com/p:$GOPATH/src/github.com:$GOPATH/src/github.com/Hapara:~/hapara
 
-fortune | ponysay
+fortune | ponysay -W 80
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/behemoth/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/behemoth/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/behemoth/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/behemoth/google-cloud-sdk/completion.zsh.inc'; fi
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
